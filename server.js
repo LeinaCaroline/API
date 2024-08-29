@@ -25,8 +25,7 @@ app.get('/usuarios', (req,res) =>{
     /* 
      Nome de usuario: leinnaacaroline
      senha: sigRXENBi4qtRvke
-            zlqHmrZcWbWZDFAY Quiksecurity
-    
+            
     
     
     */
