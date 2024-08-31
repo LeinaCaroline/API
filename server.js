@@ -1,31 +1,53 @@
 import express, { json } from 'express'
+import { PrismaClient } from '@prisma/client'
 
 
-
+const prisma = new PrismaClient()
 const app = express()
+
+
+
 app.use(express.json())
 const users = []
 
 
-app.post('/usuarios', (req,res) =>{
-    users.push(req.body)
+app.post('/usuarios', async (req, res) => {
+    //users.push(req.body)
+    await prisma.user.create({
+        data: {
+            email: req.body.email,
+            name: req.body.name,
+            age: req.body.age
+        }
+    })
+
     res.status(201).json(req.body)
+
+
+
+
 })
 
 
 
-app.get('/usuarios', (req,res) =>{
+app.get('/usuarios', (req, res) => {
     res.status(200).json(users)
 
 })
 
-    app.listen(3000)
 
 
-    /* 
-     Nome de usuario: leinnaacaroline
-     senha: sigRXENBi4qtRvke
-            
-    
-    
-    */
+
+
+
+
+app.listen(3000)
+
+
+/*
+ Nome de usuario: leinnaacaroline
+ senha: sigRXENBi4qtRvke
+        
+ 
+ 
+*/
