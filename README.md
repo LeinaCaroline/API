@@ -1,4 +1,4 @@
-# Criando uma API 
+# Criando uma API ✨
 
 Nessa pasta está a crição de uma API utilizando Node.js e integração com um banco de dados, começei com a configuração do ambiente de desenvolvimento, incluindo a instalação do Node.js e do npm.  
 
